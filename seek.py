@@ -6,7 +6,7 @@ Version : 0.1
 Note : Contribution are appreciated
 	   The results are generated from google web pages
 	   You can find this software on Github in this link:
-	    
+	   	https://github.com/abdechahidely/links_grabber/
 """
 
 from errors_handler import satisfy_arguments
