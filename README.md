@@ -9,7 +9,8 @@ This software is based on a three python files:
 Ones you have cloned the files to your computer, you have to go, from your terminal, to it's parent directorie and run this command:
 
     python3 setup.py
-  
+    source /.bashrc
+    
     Note that you have to have python3 already installed in your computer.
   
 After doing this, you're free to run the software with on of these syntaxes:
