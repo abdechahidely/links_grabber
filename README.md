@@ -1,5 +1,4 @@
-# Very important to read
-# links_grabber
+# VERY IMPORTANT TO READ
 
 This software is based on a three python files:
 
