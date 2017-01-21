@@ -25,6 +25,8 @@ After doing this, you're free to run the software with on of these syntaxes:
          seek --help
          seek --help (query or number_of_links)
          
+You can find the printed results on the terminal in a directorie called 'Seek_logs', that is generated automaticly in you 'Documents' directorie
+         
     ------------------------------------------
     |  Author  : Abdechahid Ihya             |
     |  Email   : abdechahide.ihya@homail.fr  |
