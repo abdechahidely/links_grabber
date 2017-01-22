@@ -42,8 +42,7 @@ def satisfy_arguments():
 					print(HELP[1])
 					exit(0)
 				else:
-					print(HELP[0])
-					print(HELP[1])
+					print(HELP[0]+'\n'+HELP[1])
 					exit(0)
 			notify(1, "number_of_links")
 			exit(0)
@@ -55,6 +54,5 @@ def satisfy_arguments():
 	except IndexError:
 		notify(2, 'number_of_links', 'query')
 		exit(0)
-	
-	number_of_pages = pages(number_of_links)
-	return number_of_links, number_of_pages, query
+		
+	return number_of_links, pages(number_of_links), query
