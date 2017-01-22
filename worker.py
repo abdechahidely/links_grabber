@@ -37,8 +37,8 @@ class Web_Worker:
 	def loop(self):
 		path      = os.path.expanduser('~')
 		file_name = '%s/Documents/Seek_logs/log_%s.txt'%(path, '_'.join(self.query.split(' ')))
-		print('\nWeb pages to search in : [%d]'%len(self.n_of_pages))
-		print('Results will be stored in :\n  %s\n'%file_name)
+		print('\n-> Searching in [%d] pages...'%len(self.n_of_pages))
+		print('-> Results will be stored in :\n  \x1b[1;;34m%s\x1b[0m\n'%file_name)
 		while True:
 			if os.path.exists('%s/Documents/Seek_logs'%path):
 				with open(file_name, 'w') as log_file:
