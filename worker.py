@@ -24,10 +24,8 @@ class Web_Worker:
 		except:
 			notify(3)
 			exit(0)
-		soup    = BeautifulSoup(source_code, 'html.parser')
-		h3tags  = soup.findAll('h3', class_='r')
 		total_l = []
-		for tag in h3tags:
+		for tag in BeautifulSoup(source_code, 'html.parser').findAll('h3', class_='r'):
 			try:
 				total_l.append(findall(r'/?q=(.+?)&amp', str(tag))[0])
 			except:
@@ -42,12 +40,10 @@ class Web_Worker:
 		while True:
 			if os.path.exists('%s/Documents/Seek_logs'%path):
 				with open(file_name, 'w') as log_file:
-					start = time()
 					for n in self.n_of_pages:
 						for link in self.links(n):
 							self.tracker.append(link)
 					self.tracker = self.tracker[:self.n_of_links]
-					end = time() - start
 					i = 1
 					for link in self.tracker:
 						log_file.write(link+'\n')
@@ -55,10 +51,7 @@ class Web_Worker:
 						i +=1
 				break
 			else:
-				os.chdir('%s/Documents'%path)
-				os.system('mkdir Seek_logs')
-	
-		print('\nDone in : %ds\n'%end)
+				os.system('mkdir %s/Documents/Seek_logs'%path)
 
 	def start(self):
 		self.loop()
